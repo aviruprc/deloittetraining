@@ -1,5 +1,7 @@
 package Strings;
 
+import java.util.Arrays;
+
 public class StringsManip {
 
 	public static void main(String[] args) {
@@ -30,7 +32,7 @@ public class StringsManip {
 
 		System.out.println(buffer.toString());
 		System.out.println(buffer.reverse());
-
+		numAlphabet("the quick brown fox jumps right over the lazy dog");
 	}
 
 
@@ -46,7 +48,7 @@ public class StringsManip {
 			System.out.println("Can't find " + word);
 		}
 
-		System.out.println(pallindrome("ada"));
+		System.out.println(pallindrome("ada"));     
 	}
 
 	public static boolean pallindrome(String text)
@@ -55,6 +57,21 @@ public class StringsManip {
 		StringBuffer buf = new StringBuffer(text);
 		buf = buf.reverse();
 		return text.contentEquals(buf.toString());
+	}
+	
+	public static int numAlphabet (String text) {
+		String chars = "";
+		for (char c : text.toCharArray()) {
+			if(!chars.contains(c+"") && c != ' ') {
+				chars += c;
+			}
+		}
+		
+		char [] ch = chars.toCharArray();
+		Arrays.parallelSort(ch);
+		System.out.println(new String(ch));
+		System.out.println();
+		return chars.length();
 	}
 }	
 
