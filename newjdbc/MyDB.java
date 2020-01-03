@@ -35,11 +35,11 @@ public class MyDB {
 				{
 					pass = pass+"*";
 				}
-				
-				  list.add(0,rs.getString(1)); list.add(1,rs.getString(2));
-				  list.add(2,rs.getString(3)); list.add(3,pass); list.add(4,rs.getString(5));
-				  list.add(5,rs.getString(6));
-				 
+
+				list.add(0,rs.getString(1)); list.add(1,rs.getString(2));
+				list.add(2,rs.getString(3)); list.add(3,pass); list.add(4,rs.getString(5));
+				list.add(5,rs.getString(6));
+
 				//System.out.println(rs.getInt(1)+":"+rs.getString(2)+":"+rs.getString(3)+":"+pass+":"+rs.getString(5)+":"+rs.getString(6));
 			}
 		}catch (SQLException e)
@@ -54,14 +54,11 @@ public class MyDB {
 		list1.listEmployees();
 		int count=0;
 		Iterator<String> itr =list.iterator();
-		for(int i=0; i<list.size();i++) {
-			System.out.println(list.get(2));
-			
-		}
-		
 
-		
-		
-		
+		for(int i=0; i<list.size();i=i+6) {
+			System.out.println(list.get(i)+":"+list.get(i+1)+":"+list.get(i+2)+":"+list.get(i+3)+":"+list.get(i+5));
+			System.out.println();
+		}
+
 	}
 }
