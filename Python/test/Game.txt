@@ -1,0 +1,90 @@
+India = []
+Pakistan = []
+SriLanka = []
+NewZealand = []
+Zimbawe = []
+Canada = []
+Kenya = []
+SouthAfrica = []
+WestIndies = []
+England = []
+Bangladesh = []
+Irelands = []
+Netherlands = []
+Bermuda = []
+Australia = []
+USA = []
+lista = [India, Pakistan , SriLanka, NewZealand]
+listb= [ Zimbawe, Canada, Kenya, SouthAfrica]
+listc = [WestIndies, England, Bangladesh, Irelands]
+listd = [Netherlands, Bermuda, Australia, USA]
+
+w =2 
+t = 1
+l = 0
+
+#grading system	
+
+#generating fixtures for group a
+for i in range(0,len(lista),1):
+    print(lista[i])
+    for j in range(i+1,len(lista),1):
+        print("vs",lista[j])
+        res =  eval(input("Press w for win, t for tie and l for lost *Only for HOME TEAM"))
+        if res == 'w':
+            lista[i].append(w)
+        elif res == 'l':
+            lista[i].append(l)
+        else:
+            lista[i].append(t)
+
+#generating fixtures and results for group b
+for i in range(0,len(listb),1):
+    print(listb[i])
+    for j in range(i+1,len(listb),1):
+        print("vs",listb[j])
+        res =  eval(input("Press w for win, t for tie and l for lost *Only for HOME TEAM "))
+        if res == 'w':
+            listb[i].append(w)
+            
+        elif res == 'l':
+            listb[i].append(l)
+            
+        else:
+            listb[i].append(t)
+            
+
+#generating fixtures and results for group c
+for i in range(0,len(listc),1):
+    print(listc[i])
+    for j in range(i+1,len(listc),1):
+        print("vs",listc[j])
+        res =  eval(input("Press w for win, t for tie and l for lost *Only for HOME TEAM "))
+        if res == 'w':
+            listc[i].append(w)
+            
+        elif res == 'l':
+            listc[i].append(l)
+            
+        else:
+            listc[i].append(t)
+            
+            
+
+#generating fixtures and results for group d
+for i in range(0,len(listd),1):
+    print(listd[i])
+    for j in range(i+1,len(listd),1):
+        print("vs",listd[j])
+        res =  eval(input("Press w for win, t for tie and l for lost *Only for HOME TEAM "))
+        if res == 'w':
+            listd[i].append(w)
+        
+        elif res == 'l':
+            listd[i].append(l)
+            
+        else:
+            listd[i].append(t)
+            
+#newer version will include a generalised function
+#now will find top scorers of each and append to new list

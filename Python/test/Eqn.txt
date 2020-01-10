@@ -1,0 +1,40 @@
+import math
+
+#Equation into a string
+streq="2x2+4x+1=0"
+
+#storing the a,b,c from eqn ax2+bx+c=0
+
+var1=int(streq[0])
+
+print(var1)
+
+for v1 in streq[1:]:
+    if(v1=='+'):
+        i1=streq.index(v1)
+    break
+#print(i1)
+
+#next variable is after three positions 
+
+i2=i1+3
+#print(i2)
+
+var2=int(streq[i1+4])
+print(var2)
+
+i3=i2+4
+var3=int(streq[i3])
+#print(i3)
+print(var3)
+
+#equation for roots
+var4=var2**2-4*var1*var3
+
+if(var4<0):
+    print("complex roots")
+else:
+    root1 =(-var2+math.sqrt(var4))/(2*var1)
+    root2=(-var2-math.sqrt(var4))/(2*var1)
+    print(root1)
+    print(root2)
