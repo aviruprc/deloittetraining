@@ -1,0 +1,11 @@
+<h2>text has {{len}} number of words</h2>
+
+<h3>entered text is:</h3>
+{{dataone}}
+
+<h3>Word Count:</h3>
+{% for word, num in wordict %}
+{{word}}
+{{num}}
+<br>
+{% endfor %}
